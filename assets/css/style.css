@@ -1,15 +1,23 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Alien Font";
+  src: url("../fonts/Alien_Hieroglyph.ttf");
+}
 
 :root {
   font-size: 1em;
+  font-family: Lato, "Lucida Grande", Tahoma, Sans-Serif;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  background: url("https://static.tweaktown.com/news/6/8/68872_03_even-rick-morty-uses-amd-cpu-128-bit_full.png")
+    fixed no-repeat;
+  background-size: cover;
 }
 
 .layout-container {
@@ -23,27 +31,54 @@ body {
   position: fixed;
   margin: 0;
   width: 25%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .person-wrapper {
   margin: 0 auto;
   display: flex;
+  max-width: 75%;
   flex-direction: column;
   align-items: center;
 }
 
 .person-wrapper > img {
-  width: 12.5em;
-  height: 12.5em;
+  width: 100%;
+  height: auto;
 }
 
 .person-wrapper > span {
   padding: 0.375em;
   align-self: flex-start;
+}
+
+.powered-by {
+  margin: auto 0 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.powered-by > .icon-container {
+  display: flex;
+}
+
+.powered-by > .icon-container > img {
+  margin: 10px 10px 0;
+  width: auto;
+  height: 50px;
+}
+
+.powered-by > .icon-container > img:hover {
+  cursor: pointer;
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+
+.powered-by > code {
+  display: block;
+  margin: 10px 0;
 }
 
 .page-container {
@@ -52,10 +87,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.page-title {
+  font-family: "Alien Font", "Courier New", Courier, monospace;
+  font-size: 2em;
 }
 
 .search-container {
-  margin: 0.375em 0;
+  margin: 2.375em 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -71,6 +112,7 @@ body {
   width: 18.75em;
   background: transparent;
   border: solid 1px #000;
+  outline: none;
 }
 
 .search-bar > button {
@@ -79,6 +121,7 @@ body {
   height: 2.1875em;
   background: transparent;
   border: solid 1px #000;
+  outline: none;
 }
 
 .being-card-container {
@@ -95,6 +138,7 @@ body {
   display: flex;
   flex-direction: column;
   border: solid 1px #000;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .card:hover {

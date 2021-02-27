@@ -18,15 +18,32 @@
         <div class="person-sidebar">
             <div class="person-wrapper">
                 <h1>Name</h1>
-                <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
+                <img />
                 <span id="sidebar-status">Status</span>
                 <span id="sidebar-species">Species</span>
                 <span id="sidebar-gender">Gender</span>
                 <span id="sidebar-location">Last Known Location</span>
             </div>
+
+            <div class="powered-by">
+                <span>Powered By</span>
+                <div class="icon-container">
+                    <img src="./assets/images/rick-and-morty-api-logo.svg" title="Rick and Morty API"
+                        data-url="https://rickandmortyapi.com/" />
+                    <img src="./assets/images/galactic-federation-logo.png" title="Galactic Federation"
+                        data-url="https://rickandmorty.fandom.com/wiki/Galactic_Federation" />
+                    <img src="./assets/images/council-of-ricks-logo.png" title="Council of Ricks"
+                        data-url="https://rickandmorty.fandom.com/wiki/Council_of_Ricks" />
+                </div>
+                <code>
+                    &lt;/&gt; by <a href="http://cameronlucas.tech/" target="_blank">Cameron Lucas</a>
+                </code>
+            </div>
         </div>
+
         <div class="page-container">
-            <h2>Intergalatic Goverment Search Tool</h2>
+            <h1>Intergalactic Government Search Tool</h1>
+            <span class="page-title">(Intergalactic Government Search Tool)</span>
             <div class="search-container">
                 <form class="search-bar">
                     <input type="text" name="search" placeholder="Enter Being's Name To Search" />
@@ -34,50 +51,8 @@
                 </form>
             </div>
 
-            <h2>Other Residents of Earth (C-137)</h2>
-            <div class="being-card-container">
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-                <div class="card">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-                    <span>Name</span>
-                    <span>Species - Status</span>
-                </div>
-            </div>
+            <h2 id="other-residents-title">Other Residents of</h2>
+            <div class="being-card-container"></div>
         </div>
     </main>
 </body>
