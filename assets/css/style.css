@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 1em;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.layout-container {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.person-sidebar {
+  position: fixed;
+  margin: 0;
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.person-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person-wrapper > img {
+  width: 12.5em;
+  height: 12.5em;
+}
+
+.person-wrapper > span {
+  padding: 0.375em;
+  align-self: flex-start;
+}
+
+.page-container {
+  margin: 0 0 0 25%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  margin: 0.375em 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar > input {
+  margin: 0;
+  height: 2.1875em;
+  width: 18.75em;
+  background: transparent;
+  border: solid 1px #000;
+}
+
+.search-bar > button {
+  margin: 0;
+  padding: 0 1.25em;
+  height: 2.1875em;
+  background: transparent;
+  border: solid 1px #000;
+}
+
+.being-card-container {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  margin: 0 0 1.25em;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #000;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale3d(1.025, 1.025, 1.025);
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px -2px;
+}
+
+.card > img {
+  min-width: 100%;
+  height: auto;
+}
+
+.card > span {
+  margin: 0.375em;
+}
