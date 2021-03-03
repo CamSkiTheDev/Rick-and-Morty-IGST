@@ -50,6 +50,19 @@ body {
   height: auto;
 }
 
+.fa-radar {
+  color: red;
+  animation: spin infinite 1500ms linear;
+}
+
+#add-to-radar-btn {
+  cursor: pointer;
+}
+
+#add-to-radar-btn:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
 .person-wrapper > span {
   padding: 0.375em;
   align-self: flex-start;
@@ -57,8 +70,11 @@ body {
 
 .powered-by {
   margin: auto 0 0;
-  padding: 20px;
+  padding: 1.25em;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  max-width: 75%;
 }
 
 .powered-by > .icon-container {
@@ -66,9 +82,9 @@ body {
 }
 
 .powered-by > .icon-container > img {
-  margin: 10px 10px 0;
+  margin: 0.625em 0.625em 0;
   width: auto;
-  height: 50px;
+  height: 3.125em;
 }
 
 .powered-by > .icon-container > img:hover {
@@ -78,7 +94,7 @@ body {
 
 .powered-by > code {
   display: block;
-  margin: 10px 0;
+  margin: 0.625em 0;
 }
 
 .page-container {
@@ -90,9 +106,24 @@ body {
   background: rgba(255, 255, 255, 0.5);
 }
 
+.page-container > h1,
+h2 {
+  text-align: center;
+}
+
+.load-radar {
+  font-family: "Alien Font";
+}
+
+.load-radar:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  cursor: pointer;
+}
+
 .page-title {
   font-family: "Alien Font", "Courier New", Courier, monospace;
   font-size: 2em;
+  text-align: center;
 }
 
 .search-container {
@@ -103,15 +134,19 @@ body {
 }
 
 .search-bar {
+  margin: 0 auto;
   display: flex;
+  width: 90%;
+  justify-content: center;
 }
 
 .search-bar > input {
   margin: 0;
   height: 2.1875em;
-  width: 18.75em;
+  width: 100%;
+  max-width: 18.75em;
   background: transparent;
-  border: solid 1px #000;
+  border: solid 0.0625em #000;
   outline: none;
 }
 
@@ -120,7 +155,7 @@ body {
   padding: 0 1.25em;
   height: 2.1875em;
   background: transparent;
-  border: solid 1px #000;
+  border: solid 0.0625em #000;
   outline: none;
 }
 
@@ -133,18 +168,19 @@ body {
 }
 
 .card {
-  margin: 0 0 1.25em;
+  margin: 0 0.0125em 1.25em;
   width: 23%;
+  min-width: 11.25em;
   display: flex;
   flex-direction: column;
-  border: solid 1px #000;
+  border: solid 0.0625em #000;
   background: rgba(255, 255, 255, 0.75);
 }
 
 .card:hover {
   cursor: pointer;
   transform: scale3d(1.025, 1.025, 1.025);
-  box-shadow: rgb(0 0 0 / 10%) 0px 4px 20px -2px;
+  box-shadow: rgb(0 0 0 / 10%) 0 0.25em 1.25em -0.125em;
 }
 
 .card > img {
@@ -154,4 +190,35 @@ body {
 
 .card > span {
   margin: 0.375em;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 54.375em) {
+  .layout-container {
+    flex-direction: column;
+  }
+  .person-sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+  }
+  .powered-by {
+    width: auto;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0.375em;
+    max-width: 18.75em;
+  }
+  .page-container {
+    margin: auto;
+    width: 100%;
+  }
 }
