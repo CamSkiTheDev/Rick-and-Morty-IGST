@@ -199,6 +199,15 @@ h2 {
   to {
     transform: rotate(360deg);
   }
+  0% {
+    color: green;
+  }
+  50% {
+    color: greenyellow;
+  }
+  100% {
+    color: green;
+  }
 }
 
 @media screen and (max-width: 54.375em) {
