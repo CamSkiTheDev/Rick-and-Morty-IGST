@@ -86,7 +86,7 @@ const loadRadar = () => {
     if(!radar || radar.length < 1)
         return alert('No beings are currently on your radar.')
     
-    state.$otherResidentsTitle.text(`Being's On Your Radar`)
+    state.$otherResidentsTitle.text(`Your Radar`)
     state.$otherResidents.html(null)
 
     radar = radar.map(being => {
