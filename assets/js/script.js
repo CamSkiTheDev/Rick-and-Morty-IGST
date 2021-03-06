@@ -20,16 +20,21 @@ const state = {
 
 const renderCurrentBeing = (being) => {
     const radarArray = JSON.parse(localStorage.getItem(state.localStorageKey))
+
     let isOnRadar
+
     if(radarArray)
         isOnRadar = !!radarArray.filter(x => x.id === being.id).length
+
     state.currentBeing = {...being}
     state.$sidebarName.text(state.currentBeing.name)
     state.$sidebarImg.attr('src', state.currentBeing.image)
+
     if(isOnRadar)
         state.$addToRadarBtn.html('<b>Remove From Radar</b> <i class="fal fa-radar"></i>')
     else
         state.$addToRadarBtn.html('<b>Add To Radar</b> <i class="fal fa-radar"></i>')
+
     state.$sidebarStatus.html(`<b>Status: </b>${state.currentBeing.status}`)
     state.$sidebarSpecies.html(`<b>Species: </b>${state.currentBeing.species}`)
     state.$sidebarGender.html(`<b>Gender: </b>${state.currentBeing.gender}`)
@@ -101,20 +106,24 @@ const loadRadar = () => {
 
 const addToRadar = () => {
     let personalRadar = JSON.parse(localStorage.getItem(state.localStorageKey))
+
     if(!personalRadar) {
         personalRadar = [{...state.currentBeing}]
         localStorage.setItem(state.localStorageKey, JSON.stringify(personalRadar))
+
         state.$addToRadarBtn.html('<b>Remove From Radar</b> <i class="fal fa-radar"></i>')
         alert(`${state.currentBeing.name} has been added to your radar.`)
     } else {
         if(personalRadar.filter(being => being.name === state.currentBeing.name).length < 1){
             personalRadar.push({...state.currentBeing})
             localStorage.setItem(state.localStorageKey, JSON.stringify(personalRadar))
+
             state.$addToRadarBtn.html('<b>Remove From Radar</b> <i class="fal fa-radar"></i>')
             alert(`${state.currentBeing.name} has been added to your radar.`)
         } else {
             personalRadar = personalRadar.filter(being => being.name !== state.currentBeing.name)
             localStorage.setItem(state.localStorageKey, JSON.stringify(personalRadar))
+            
             state.$addToRadarBtn.html('<b>Add To Radar</b> <i class="fal fa-radar"></i>')
             alert(`${state.currentBeing.name} has been removed to your radar.`)
         }
