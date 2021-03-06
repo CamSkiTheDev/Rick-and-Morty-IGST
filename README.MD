@@ -47,3 +47,7 @@ To run this application locally or host it your self you can clone this repo to 
   - Login/Sign Up for Vercel with your GitHub account
   - Create a new project and select the forked repo
   - Import the repo to Vercel and click deploy.
+
+### Technical Approach
+
+Knowing that the data from the API may contain hundreds of characters Objects. I wanted to create a global Object to store the data from the API to reduce the number of API calls. We also pull all the residents from the same dimension as the currently selected character, so the API calls can stack up quick. I also wanted to use this global Object to store all of the jQuery references to the needed DOM Nodes, this will make manipulating the DOM easier. Another goal was to store your "favorite/most wanted" to your "radar". I achieved this without a backend by using local storage. I can store an Array of character objects, load them and render them to the DOM at a later time.
